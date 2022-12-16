@@ -1,0 +1,44 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="column">
+                <h3 class="headline">HOME</h3>
+                <h2 class="score font" id="home-score">0</h2>
+            <div>
+                <button class="typography" id="btn-one" onclick="plusOne()">+1</button>
+                <button class="typography" id="btn-two" onclick="plusTwo()">+2</button>
+                <button class="typography" id="btn-three" onclick="plusThree()">+3</button>
+            </div>
+        </div>
+            
+                
+        <div class="container">
+            <div class="column">
+                <button class="reset typography" id="reset-btn" onclick="reset()">Reset</button>
+            </div>
+        </div>
+                
+                
+        <div class="container">
+            <div class="column">
+                <h3 class="headline">GUEST</h3>
+                <h2 class="score font" id="guest-score">0</h2>
+            <div>
+                <button class="typography" id="guest-btn-one" onclick="guestOne()">+1</button>
+                <button class="typography" id="guest-btn-two" onclick="guestTwo()">+2</button>
+                <button class="typography" id="guest-btn-three" onclick="guestThree()">+3</button>
+            </div>
+        </div>
+        
+    
+        <div class="timer">
+                <h1 class="typography" id="timer-div">5 seconds remaining</h1>
+        </div>   
+         
+        <script src="index.js"></script>
+    </body>
+</html>
