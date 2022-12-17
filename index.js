@@ -1,3 +1,11 @@
+
+// 1. ¿por qué los nombres de las variables y las funciones comparten la misma
+// raíz por ejemplo: plus#### o guest####, es acaso que si tendrían nombres
+// distintos el codigo no se engancharía ?
+
+// 2. ¿Cómo conseguir que al hacer click en el reset button el
+// timer empiece de nuevo el conteo hacia abajo ?
+
 //--------------------Home-------------------------------
 
 let plusBtnOne = document.getElementsByClassName("btn-one");
@@ -55,59 +63,19 @@ let resetGuestScores = document.getElementById("guest-score");
 function reset() {
   (guestCounter = 0), (plusCounter = 0), (resetHomeScores.textContent = 0);
   resetGuestScores.textContent = 0;
-  // elem.textContent = timeLeft + ' seconds remaining';
-  // countdown();
 }
 
 //-----------------------Timer------------------------------
 
-// let timeLeft = 5;
-//     let elem = document.getElementById('timer-div');
-//     let timerId = setInterval(countdown, 1000);
-
-//     function cronometer(){
-//         if (plusCounter || guestCounter > 1);
-//         elem.textContent = timeLeft + ' second remaining';
-//     } else {
-//         timeLeft == 0
-//         reset();
-//     }
-
-// function countdown() {
-//   if (timeLeft == -1) {
-//     clearTimeout(timerId);
-//     // elem.innerHTML = ' Game Over!';
-//     reset()
-//   } else {
-
-//       timeLeft
-//       plusCounter || guestCounter > 1
-//       countdown
-//     // elem.innerHTML = timeLeft + ' seconds remaining';
-//     // timeLeft--;
-//   }
-// }
-
-//     window.onload = function() {
-// let sec = 5;
-//   setInterval(function() {
-//     document.getElementById("timer-div").innerHTML = sec;
-//     sec--;
-//     if (sec == 00) {
-//     sec = 5
-//     plusCounter && guestCounter
-
-//   }
-//     }1000);
-
-// //     }
-// // setInterval(function(){ alert("Popup window!"); }, 500);
-
-// let timeleft = 3;
-// let downloadTimer = setInterval(function(){
-//   if(timeleft <= 0){
-//     clearInterval(downloadTimer);
-//   }
-//   document.getElementById("time-div").value = 3 - timeleft;
-//   timeleft -= 1;
-// }, 1000);
+let timeleft = 8;
+let downloadTimer = setInterval(function () {
+  if (timeleft <= 0) {
+    clearInterval(downloadTimer);
+    document.getElementById("timer-div").innerHTML = "Game over";
+    reset();
+  } else {
+    document.getElementById("timer-div").innerHTML =
+      timeleft + " seconds remaining";
+  }
+  timeleft -= 1;
+}, 1000);
